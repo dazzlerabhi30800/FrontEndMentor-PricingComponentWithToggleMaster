@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition : all .1s ease-in;
+  font-family : 'Montserrat', sans-serif;
+}
+
+
+
+
+:root {
+  --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+  /*### Neutral*/
+
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+html {
+	display : flex;
+	overflow-x : hidden;
+}
+
+body {
+  display : flex;
+  height: auto;
+  overflow-x: hidden;
+  flex-direction : column;
+  align-items : center;
+  background : var(--Very-Light-Grayish-Blue);
+  width : 100vw;
+}
+
+
+
+/*Background SVG */
+.bg__top {
+  width: 500px;
+  height: 600px;
+  left : 42%;
+  position : absolute;
+  top : 0%;
+  overflow : hidden;
+  z-index : 1;
+}
+.bg__top img {
+	width : 450px;
+	height : 600px;
+	left : 0px;
+	position : absolute;
+}
+.bg__bottom {
+  width: 500px;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  opacity : 0;
+}
+
+/*Main container*/
+.container {
+	height : auto;
+	margin-top : 2rem;
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	/*background : red;*/
+	width : 300px;
+	z-index : 444;
+	padding : 2.5rem 0;
+
+
+}
+.main__content {
+	display: flex;
+	flex-direction : column;
+}
+.heading {
+	font-size : 2rem;
+	color : var(--Grayish-Blue);
+	padding : 0 1rem;
+}
+.toggle__wrapper {
+	display : flex;
+	justify-content : space-between;
+	margin-top : 2rem;
+	align-items : center;
+}
+.annual {
+	color : var(--Light-Grayish-Blue);
+}
+.toggle__button {
+	background : hsl(237, 63%, 64%);
+	width : 50px;
+	height : 27px;
+	border-radius : 30px;
+	position : relative;
+}
+.circle {
+	position : absolute;
+	width : 20px;
+	height : 20px;
+	z-index : 33;
+	background : #fff;
+	border-radius : 50%;
+	top : 10%;
+	left : 7%;
+	cursor : pointer;
+	transition : all .2s linear;
+}
+/*.circle:hover {*/
+	/*left : 53%;	*/
+/*}*/
+.active {
+	left : 53%;
+}
+.monthly {
+	color : var(--Light-Grayish-Blue);
+}
+
+
+/*Card Container */
+.card__wrapper {
+	display : grid;
+	grid-template-columns : repeat(1, 1fr);
+	justify-content : center;
+	align-items : center;
+	margin-top : 3rem;
+	gap : 1.5rem;
+}
+.card {
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+	background : var(--Very-Light-Grayish-Blue);
+	box-shadow : 1px 1px 30px 2px rgba(0,0,0, .2);
+	border-radius : 10px;
+	padding : 1rem 1rem;
+	gap : 1rem;
+	width : 300px;
+	padding-bottom : 2rem;
+}
+.plan__type {
+	font-size : 1.5rem;
+	color : var(--Light-Grayish-Blue);
+}
+.price {
+	font-size : 3rem;
+	color : var(--Dark-Grayish-Blue);
+	transition : all .2s linear;
+}
+.info__wrapper {
+	border-top : 1px solid var(--Light-Grayish-Blue);
+	padding : .8rem;
+	display : flex;
+	flex-direction : column;
+	gap : 1rem;
+	align-items: center;
+	width : 200px;
+}
+.storage {
+	border-bottom : 1px solid var(--Light-Grayish-Blue);
+	padding-bottom : .8rem;
+	width : 200px;
+	text-align : center;
+	color : var(--Grayish-Blue);
+}
+.users {
+	border-bottom : 1px solid var(--Light-Grayish-Blue);
+	padding-bottom : .8rem;
+	width : 200px;
+	text-align : center;
+	color : var(--Grayish-Blue);
+}
+.data__transfer {
+	border-bottom : 1px solid var(--Light-Grayish-Blue);
+	padding-bottom : .8rem;
+	width : 200px;
+	text-align : center;
+	color : var(--Grayish-Blue);
+}
+.btn {
+	background : var(--Very-Light-Grayish-Blue);
+	padding : .5rem 1rem;
+	display : flex;
+	width : 200px;
+	align-items : center;
+	justify-content : center;
+	border-radius : 5px;
+	position : relative;
+	transition : all .3s ease-in;
+	border : 1px solid hsl(237, 63%, 64%);
+	cursor : pointer;
+}
+
+.button {
+	font-size : .9rem;
+	text-decoration: none;
+	color : hsl(237, 63%, 64%);
+	letter-spacing : 1px;
+	text-transform : uppercase;
+	transition : all .2s ease-in;
+	cursor : pointer;
+}
+
+/*Master Container*/
+#card2 {
+		
+	background : linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	padding : .5rem 1rem;
+	padding-bottom : 2rem;
+}
+#card2 .plan__type {
+	color : var(--Very-Light-Grayish-Blue);
+	margin-top : 1rem;
+}
+#card2 .price {
+	color : var(--Very-Light-Grayish-Blue);
+}
+#card2 .storage {
+	color : var(--Very-Light-Grayish-Blue);
+}
+#card2 .users {	
+	color : var(--Very-Light-Grayish-Blue);
+}
+#card2 .data__transfer {
+	color : var(--Very-Light-Grayish-Blue);
+}
+#card2 .btn {
+		background : linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+		border : 1px solid var(--Very-Light-Grayish-Blue);
+}
+#card2 .button {
+	color : var(--Very-Light-Grayish-Blue);
+}
+
+
+@media (min-width: 1000px){
+	body {
+		height : 100vh;
+	}
+	/*Background SVG */
+.bg__top {
+  width: 500px;
+  height: 650px;
+  left : 42%;
+  position : absolute;
+  top : 0%;
+  overflow : visible;
+  z-index : 1;
+}
+.bg__top img {
+	width : 450px;
+	height : 650px;
+	left : 42rem;
+	position : absolute;
+}
+.bg__bottom {
+  width: 500px;
+  height: 650px;
+  position: absolute;
+  left: 0%;
+  bottom: -30%;
+  opacity : 1;
+}
+.bg__bottom img {
+	width : 450px;
+	height : 350px;
+	position : absolute;
+}
+
+.heading {
+	text-align : center;
+}
+.toggle__wrapper {
+	justify-content : center;
+	align-items : center;
+	display : flex;
+	gap : 2rem;
+	padding : .3rem;
+}
+.toggle__button {
+	background : hsl(237, 63%, 64%);
+	width : 50px;
+	height : 27px;
+	border-radius : 30px;
+	position : relative;
+}
+.circle {
+	position : absolute;
+	width : 20px;
+	height : 20px;
+	z-index : 33;
+	background : #fff;
+	border-radius : 50%;
+	top : 11%;
+	left : 7%;
+	cursor : pointer;
+	transition : all .2s linear;
+}
+.active {
+	left : 53%;
+}
+
+/*Card Container */
+.card__wrapper {
+	display : grid;
+	grid-template-columns : repeat(3, 1fr);
+	justify-content : center;
+	align-items : center;
+	margin-top : 3rem;
+	gap : 4rem;
+}
+#card2 {
+	transform : scale(1.2);
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
