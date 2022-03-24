@@ -25,6 +25,7 @@
 html {
 	display : flex;
 	overflow-x : hidden;
+	width : 100vw;
 }
 
 body {
